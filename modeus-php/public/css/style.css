@@ -1,0 +1,904 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+
+    margin:0;
+
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+}
+
+select{
+    width:80%;
+    height: 30px;
+
+    margin: 10px 10%;
+    padding:5px;
+
+    border-radius: 3px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.center-container{
+    text-align: center;
+}
+
+/* для изображений в кружке */
+.round {
+    margin: 0 10px;
+    border-radius: 100px;
+    border: 3px solid #005092;
+    box-shadow: 0 0 7px #666;
+}
+
+/* для скрытия элементов */
+.hide{
+    display: none;
+}
+
+/* для некоторых ссылок */
+.non-decorated{
+    text-decoration:none;
+}
+
+nav{
+    display: inline-block;
+    text-align: center;
+    vertical-align:middle;
+}
+nav a {
+    text-decoration: none;
+    padding: 0 25px;
+}
+
+nav ul:first-child, nav ul:last-child {
+    padding: 0;
+}
+
+ul {
+    padding-inline-start: 0;
+    margin: 0;
+    list-style: none;
+}
+
+li {
+    display: inline-block;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #FFFFFF;
+    margin: 10px 25px 10px;
+    padding: 0;
+}
+
+button{
+    background-color: #005092;
+    border: 0;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    font-weight: 500;
+    vertical-align: middle;
+    color: #FFFFFF;
+
+    cursor: pointer;
+}
+
+table button{
+    width:120px;
+    height:30px;
+
+    font-size: 12px;
+}
+
+button:hover{
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+/* Меню в шапке */
+.main-header{
+    background-color: #292929;
+}
+
+.main-menu{
+    margin:0 auto;
+}
+
+.main-menu li, .template-menu li{
+    font-size: 12px;
+    line-height: 36px;
+
+    text-align: center;
+    text-decoration-line: underline;
+    color: #FFFFFF;
+
+    display: inline;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.main-menu a{
+    text-decoration-line: none;
+    color: #fff;
+}
+
+/* Лого и промо-текст */
+.header-top{
+}
+
+.promo{
+    margin-top: 35px;
+    margin-left: auto;
+}
+
+.logo {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.logo img {
+    vertical-align: middle;
+}
+
+.promo-title{
+    display: inline-block;
+
+    margin-left: 30px;
+
+    font-weight: bold;
+    font-size: 22px;
+    line-height: 35px;
+
+    vertical-align: top;
+
+    align-items: center;
+    text-align: left;
+    text-transform: uppercase;
+
+    color: #005092;
+}
+
+.promo-title p{
+    margin-top: 0;
+
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+
+    text-transform: none;
+    color: #000000;
+}
+
+/* Зона с карточками программ для выбора */
+.object-zone{
+    margin: 0 auto;
+}
+
+.text-zone{
+    margin:0 auto;
+    padding: 20px;
+    vertical-align: middle;
+}
+
+.gray{
+    background-color: rgba(196, 196, 196, 0.1);
+}
+
+.object-zone h2{
+    margin: 5px auto;
+    font-size: 20px;
+    color: #005092;
+}
+
+/* svg графики с моего круга */
+.chart{
+    width:90%;
+    height:25%;
+
+    margin:10px auto 0;
+
+    align-items: center;
+    text-align: center;
+}
+
+/* прибивает футер к низу */
+main{
+    min-height: calc(100vh - 200px);
+}
+
+/* Footer */
+.main-footer{
+    margin-top: 20px;
+    height: 180px;
+    background-color: #292929;
+
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+}
+
+.social-nets ul li {
+    margin: 5px 5px;
+}
+
+.social-nets ul li a {
+    padding: 5px;
+}
+
+/* Вкладки на странице */
+
+#page-content .container {
+    margin: 0 auto;
+}
+
+#majors h3{
+    display: inline-block;
+
+    color: #005092;
+}
+
+.content{
+    display:block;
+}
+
+.tabs-container, .tab-content-container{
+    display:inline-block;
+}
+
+.tab-content-container{
+    vertical-align: top;
+    color: black;
+}
+
+[data-tab-content] {
+    display: none;
+}
+
+.active[data-tab-content] {
+    display: block;
+}
+
+.tabs {
+    display: inline-block;
+}
+
+.tab-content-container h4{
+    display: block;
+    color: #005092;
+}
+.tab-content-container p{
+    display: block;
+}
+
+
+/* Таблица учебного плана */
+.draggable-content {
+    width: 90px;
+    height: 40px;
+
+    margin: auto;
+    padding-left:5px;
+    padding-right: 5px;
+
+    border-radius: 3px;
+    -moz-border-radius: 3px;
+
+    text-align: center;
+    vertical-align: middle;
+    font-weight: normal;
+    font-size: 12px;
+    color:black;
+
+    opacity: 0.9;
+    filter: alpha(opacity=90);
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+
+    overflow: hidden;
+    cursor: move;
+}
+
+.draggable-content:hover {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow: visible;
+    min-height: 40px;
+    height: auto;
+}
+
+.draggable-content-area table {
+    background-color: white;
+    border-collapse: collapse;
+    border-radius: 10px;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.basic{
+    background-color: white;
+}
+
+.draggable-content-area td {
+    padding: 5px;
+    border: 1px solid #e8e9eb;
+    text-align: center;
+    font-size: 12px;
+}
+
+.blank, .dark {
+    font-weight: bold;
+    color: white;
+    background-color: #005092;
+}
+
+.green {
+    background-color: #A5F09D;
+    border: 1px solid #A5F09D;
+}
+.sea {
+    background-color: #91DEC5;
+    border: 1px solid #91DEC5;
+}
+.yellow {
+    background-color: #F0FFB7;
+    border: 1px solid #F0FFB7;
+}
+.orange{
+    background-color: #FFDE8E;
+    border: 1px solid #FFDE8E;
+}
+.fox{
+    background-color: #FFBF7F;
+    border: 1px solid #FFBF7F;
+}
+.pink2{
+    background-color: #FF97AD;
+    border: 1px solid #FF97AD;
+}
+.purple2{
+    background-color: #BB99FF;
+    border: 1px solid #BB99FF;
+}
+.blue2{
+    background-color: #79C1F1;
+    border: 1px solid #79C1F1;
+}
+.sea2{
+    background-color: #87D5D5;
+    border: 1px solid #87D5D5;
+}
+.blue {
+    background-color: #AAC8E2;
+    border: 1px solid #AAC8E2;
+}
+.purple {
+    background-color: #C4AFFF;
+    border: 1px solid #C4AFFF;
+}
+.pink {
+    background-color: #E99AE6;
+    border: 1px solid #E99AE6;
+}
+.red {
+    background-color: #FFC5C2;
+    border: 1px solid #FFC5C2;
+}
+
+.clickable{
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.clickable:hover{
+    opacity: 0.7;
+    filter: alpha(opacity=70);
+}
+
+.trash{
+    background-color: lightgray;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+}
+
+.trash img{
+    width: 30px;
+    height: 30px;
+}
+
+/* Popup форма*/
+.popup, .popup::after, .popup::before {
+    box-sizing: border-box;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 200ms ease-in-out;
+    z-index: 10;
+    background-color: white;
+    width: 250px;
+    max-width: 80%;
+    border: 0;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1), 0 5px 5px 0 rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.popup.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.popup-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #9E9C9C;
+}
+
+.popup-header .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.popup-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: black;
+}
+
+.close-button{
+    width: 40px;
+}
+
+.popup-body {
+    padding: 10px 15px;
+}
+
+.popup-body fieldset {
+    margin: 10px auto;
+    border: none;
+}
+.popup-body input[type=radio] {
+    display: none;
+}
+.popup-body label {
+    display: block;
+    cursor: pointer;
+    position: relative;
+    padding: 0 25px;
+    margin-bottom: 5px;
+    margin-right: 0;
+    line-height: 18px;
+    user-select: none;
+}
+.popup-body label:before {
+    content: "";
+    display: inline-block;
+    width: 17px;
+    height: 18px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background: url(../img/radio-1.png) 0 0 no-repeat;
+}
+
+/* Checked */
+.popup-body input[type=radio]:checked + label:before {
+    background: url(../img/radio-2.png) 0 0 no-repeat;
+}
+
+/* Hover */
+.popup-body label:hover:before {
+    filter: brightness(120%);
+}
+
+/* Disabled */
+.popup-body input[type=radio]:disabled + label:before {
+    filter: grayscale(100%);
+}
+
+.submit-button{
+    display: block;
+    width: 120px;
+    height: 40px;
+    margin: 0 auto 20px;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .25);
+    pointer-events: none;
+}
+
+#overlay.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+
+/* Адаптивные стили */
+@media screen and (min-width: 300px) {
+    nav a {
+        text-decoration: none;
+        padding: 0 10px;
+    }
+    main {
+        min-height: calc(100vh - 150px);
+    }
+    .main-header{
+        height: 80px;
+    }
+    .main-menu{
+        width: 100%;
+        margin: 10px auto;
+
+        vertical-align: middle;
+        text-align: center;
+    }
+    .img{
+        width:88px;
+        height:54px;
+    }
+    .promo{
+        margin-top: 20px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .promo-title{
+        width:200px;
+        margin-left:10px;
+
+        line-height: normal;
+        font-size:12px;
+    }
+    .promo-title p{
+        margin-top:5px;
+        line-height: normal;
+        font-size: 12px;
+    }
+    .tabs-container, .tab-content-container, .major-professions{
+        width:100%;
+        text-align: center;
+    }
+    select{
+        font-size:12px;
+    }
+    .article{
+        margin: 0 10%;
+    }
+    .profession{
+        font-size:12px;
+    }
+    .object-zone h2{
+        font-size: 14px;
+    }
+    .chart{
+        width: 100%;
+    }
+    .object-zone .img{
+        width:90%;
+        height: auto;
+    }
+    .round{
+        width: 50px;
+        height: 50px;
+    }
+    .main-footer{
+        height:130px;
+        padding:20px;
+
+        vertical-align: middle;
+        text-align: center;
+
+        line-height: normal;
+        font-size:12px;
+    }
+    .main-footer p{
+        margin: 5px 0;
+    }
+    .social-nets p{
+        display: none;
+    }
+    .social-nets img{
+        width: 30px;
+        height:30px;
+    }
+    .copyright{
+        display:none;
+    }
+    .instruction p{
+        font-size: 12px;
+    }
+    .table-main-header{
+        display: none;
+    }
+
+    table td {
+        display: block;
+    }
+}
+
+@media screen and (min-width: 720px) {
+    nav a {
+        padding: 0 10px;
+
+        text-decoration: none;
+        font-size:14px;
+    }
+    main {
+        min-height: calc(100vh - 220px);
+    }
+    .main-header{
+        height: 60px;
+    }
+    .main-menu{
+        width: 100%;
+        margin: 10px auto;
+
+        vertical-align: middle;
+        text-align: center;
+    }
+    .img{
+        width:132px;
+        height:81px;
+    }
+    .promo{
+        margin-top: 20px;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .promo-title{
+        width:400px;
+        margin-left:10px;
+
+        line-height: normal;
+        font-size:16px;
+    }
+    .promo-title p{
+        margin-top:5px;
+        line-height: normal;
+        font-size: 16px;
+    }
+    .tabs-container, .tab-content-container, .major-professions{
+        width:100%;
+        text-align: center;
+    }
+    select{
+        font-size:16px;
+    }
+    .article{
+        margin: 0 10%;
+    }
+    .profession{
+        font-size:16px;
+    }
+    .object-zone h2{
+        font-size: 18px;
+    }
+    .chart{
+        width: 100%;
+    }
+    .object-zone .img{
+        width:90%;
+        height: auto;
+    }
+    .round{
+        width: 100px;
+        height: 100px;
+    }
+    .main-footer{
+        height:200px;
+        padding:20px;
+
+        vertical-align: middle;
+        text-align: center;
+
+        line-height: normal;
+        font-size:10px;
+    }
+    .main-footer p{
+        margin: 5px 0;
+    }
+    .social-nets{
+        display: inline-block;
+        width:25%;
+
+        margin:10px 1%;
+
+        text-align: center;
+        vertical-align: middle;
+    }
+    .social-nets img{
+        width: 35px;
+        height:35px;
+    }
+    .social-nets p{
+        display: block;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .copyright{
+        display: inline-block;
+        width:25%;
+
+        margin:10px 1%;
+
+        text-align: left;
+        vertical-align: middle;
+    }
+    .address{
+        display: inline-block;
+        width:25%;
+
+        margin:10px 1%;
+
+        text-align: right;
+        vertical-align: middle;
+    }
+    .instruction p{
+        font-size: 16px;
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    nav a {
+        padding: 0 30px;
+        text-decoration: none;
+        font-size:14px;
+    }
+    main {
+        min-height: calc(100vh - 240px);
+    }
+    .main-header{
+        height: 40px;
+    }
+    .main-menu{
+        width: 100%;
+        margin: 0 auto;
+    }
+    .img{
+        width:176px;
+        height:108px;
+    }
+    .promo{
+        margin: 20px auto;
+        vertical-align: middle;
+        text-align: center;
+    }
+    .promo-title{
+        width:400px;
+        margin-left:10px;
+
+        line-height: normal;
+        font-size:16px;
+    }
+    .promo-title p{
+        margin-top:5px;
+        line-height: normal;
+        font-size: 14px;
+    }
+    .tabs-container, .tab-content-container, .major-professions{
+        width:100%;
+        text-align: center;
+    }
+    select{
+        width:80%;
+        height:40px;
+        font-size:14px;
+    }
+    .container{
+        width:80%;
+    }
+    .article{
+        margin: 0 10%;
+    }
+    .profession{
+        font-size:14px;
+    }
+    .object-zone h2{
+        font-size: 18px;
+    }
+    .chart{
+        width: 100%;
+    }
+    .object-zone .img{
+        width:90%;
+        height: auto;
+    }
+    .round{
+        width: 100px;
+        height: 100px;
+    }
+    .main-footer{
+        height:200px;
+        padding:20px;
+
+        vertical-align: middle;
+        text-align: center;
+
+        line-height: normal;
+        font-size:14px;
+    }
+    .main-footer p{
+        margin: 5px 0;
+    }
+    .social-nets{
+        display: inline-block;
+        width:30%;
+
+        margin:10px 1%;
+
+        text-align: center;
+        vertical-align: middle;
+    }
+    .social-nets p{
+        display: block;
+        text-align: center;
+        vertical-align: middle;
+    }
+    .social-nets img{
+        width: 48px;
+        height:48px;
+    }
+    .copyright{
+        display: inline-block;
+        width:30%;
+
+        margin:10px 1%;
+
+        text-align: left;
+        vertical-align: middle;
+    }
+    .address{
+        display: inline-block;
+        width:30%;
+
+        margin:10px 1%;
+
+        text-align: right;
+        vertical-align: middle;
+    }
+    .instruction p{
+        font-size: 14px;
+    }
+    .table-mobile-header{
+        display: none;
+    }
+    .table-main-header{
+        display: table-row;
+    }
+    table td {
+        display: table-cell;
+    }
+}
+/*
+    Для таблиц можно попробовать
+    style="position: -webkit-sticky; position: sticky;"
+*/
