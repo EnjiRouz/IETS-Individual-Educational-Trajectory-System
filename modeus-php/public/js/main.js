@@ -634,6 +634,24 @@ function createPdf() {
     doc.setFontSize(12);
     doc.setTextColor(0, 0, 0);
 
+    // добавление логотипа
+    doc.addImage({
+        imageData : "img/logo.png",
+        x         : 50,
+        y         : 40,
+        w         : 235/3,
+        h         : 143/3
+    });
+
+    // добавление заголовка
+    let options=getById("tabs").options;
+    let selectedOption=getById("tabs").selectedIndex;
+    let majorName = options[selectedOption].id.replace("major-name=", "");
+    let headerText="Индивидуальный учебный план для направления\n"+majorName;
+    let pageWidth = doc.internal.pageSize.width || doc.internal.pageSize.getWidth();
+    doc.text(headerText, pageWidth / 2, 60, 'center');
+
+    // добавление таблицы
     doc.autoTable({
         head: [[
             // заголовки
@@ -697,7 +715,7 @@ function createPdf() {
             lineColor: 240,
             lineWidth: 1,
         },
-        margin: {top: 60},
+        margin: {top: 100},
     });
 
     doc.save("student-program.pdf");
